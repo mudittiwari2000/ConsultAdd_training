@@ -1,0 +1,96 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Quicksand', 'san-serif';
+  background-color: steelblue;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header .container__header {
+  margin-bottom: 0.6em;
+}
+
+header .container__sub-header {
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+
+section {
+  flex-grow: 1;
+  padding: 1em;
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  --size: 21em;
+  --bg-clr: mediumseagreen;
+  width: var(--size);
+  height: var(--size);
+  background-color: var(--bg-clr);
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.circle.circle__grand-parent {
+  position: relative;
+  background-color: #;
+}
+
+.circle.circle__parent {
+  --size: 14em;
+  --bg-clr: firebrick;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle.circle__child {
+  --size: 7em;
+  --bg-clr: yellow;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle__label {
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-top: 0.2em;
+  color: #fff;
+}
+
+.circle.circle__child .circle__label {
+  color: #000;
+}
